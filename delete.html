@@ -16,41 +16,43 @@
         text {
             font-size: 24px;
         }
-
         .cent:hover {
             background-color: greenyellow ;
             
         }
+
     </style>
 
     <body>
-        <center> <h1> CRUD APP </h1></center>
-        <center> <text> Enter Object Data Below </text> </center>
+        <center>
+            <h1>
+                CRUD APP
+            </h1>
+        </center>
+
+        <center>
+            <text>
+                Enter a dictionary key to be deleted
+            </text>
+        </center>
+
         <br>
 
-        <form action="{{url_for('success')}}", method="post">
+ <p> dictionary: {{retrieve_dictionary}} </p>
+
+        <form action="{{url_for('delete_element')}}", method="post">
             <center> 
                 <label for="entry1">Enter Key:</label>
                 <input type="text" name="entry1"> 
-                
-                <br>
-                <br>
-
-                <label for="entry2">Enter Value:</label>
-                <input type="text" name="entry2"> 
-                
-                <br>
-                <br>
-
-                <input class="cent" type="submit" value="Submit">
-
+                        
+                <input class = "cent" type="submit" value="Submit">
             </center>
-
-            <br>
-            <br>
-
         </form>
+                
+                <br>
+                <br>
 
-        <center> <button class="cent" onclick="window.location.replace('/')">Return to Home Page</button> </center>
+            <center> <button class = "cent" onclick="window.location.replace('/')">Return to Home Page</button> </center>
+
     </body>
 </html>
